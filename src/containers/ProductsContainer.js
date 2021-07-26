@@ -3,9 +3,13 @@ import {connect} from "react-redux";
 import Products from "../components/Products";
 import Product from "../components/Product";
 import PropTypes from 'prop-types';
-import {actAddToCart, actChangeMessage} from "./../actions/index";
+import {actAddToCart, actChangeMessage, actGetAllProductsRequest} from "./../actions/index";
 
 class ProductsContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchAllProducts();
+    }
 
     showProducts(products){
         var result = null;
@@ -28,7 +32,7 @@ class ProductsContainer extends Component {
     }
 }
 
-//kiem tra xem props product co phai la mot array ko, va bat buoc phai co'
+// kiem tra xem props product co phai la mot array ko, va bat buoc phai co'
 ProductsContainer.propTypes = {
     products: PropTypes.arrayOf(
         //kiem tra tung object trong array
@@ -59,7 +63,13 @@ const mapDispatchToProps = (dispatch, props) => {
         },
         onChangeMessage: (message) => {
             dispatch(actChangeMessage(message));
+        },
+        fetchAllProducts: () => {
+            dispatch(actGetAllProductsRequest());
         }
+        // onDeleteProducts: (id) => {
+        //     dispatch(actDeleteProducts(id));
+        // }
     }
 }
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import {Link} from "react-router-dom";
 
 class Footer extends Component {
     render() {
@@ -9,149 +10,56 @@ class Footer extends Component {
                     <div className="container-fluid">
                         <div className="row">
                             <div className="col-lg-2 ml-auto">
-                                <h5 className="title social-section-title">Social Media</h5>
+                                <h5 className="title social-section-title">ABOUT ME</h5>
                                 <div className="social-section text-md-left">
                                     <ul className="text-center">
                                         <li>
-                                            <a className="btn-floating  btn-fb waves-effect waves-light">
+                                            <a className="btn-floating  btn-fb waves-effect waves-light"
+                                               href="https://www.facebook.com/phamcaoson1999" target="_blank">
                                                 <i className="fa fa-facebook"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="btn-floating  btn-ins waves-effect waves-light">
-                                                <i className="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="btn-floating  btn-tw waves-effect waves-light">
-                                                <i className="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="btn-floating  btn-yt waves-effect waves-light">
-                                                <i className="fa fa-youtube"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="btn-floating  btn-li waves-effect waves-light">
+                                            <a className="btn-floating  btn-li waves-effect waves-light"
+                                               href="https://www.linkedin.com/in/son-pham-b5734b1a6/" target="_blank">
                                                 <i className="fa fa-linkedin"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a className="btn-floating  btn-dribbble waves-effect waves-light">
-                                                <i className="fa fa-dribbble left"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="btn-floating  btn-pin waves-effect waves-light">
-                                                <i className="fa fa-pinterest"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a className="btn-floating  btn-gplus waves-effect waves-light">
-                                                <i className="fa fa-google-plus"></i>
+                                            <a className="btn-floating  btn-li waves-effect waves-light"
+                                               href="https://github.com/CaoSon1909" target="_blank">
+                                                <i className="fa fa-github"></i>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-lg-2">
-                                <h5 className="title">Delivery</h5>
+                            <div className="col-lg-3">
+                                <h5 className="title">More Contact</h5>
                                 <ul>
                                     <li>
-                                        <a>Store Delivery</a>
-                                    </li>
-                                    <li>
-                                        <a>Online Delivery</a>
-                                    </li>
-                                    <li>
-                                        <a>Delivery Terms &amp; Conditions</a>
-                                    </li>
-                                    <li>
-                                        <a>Tracking</a>
+                                        <i className="fa fa-envelope"></i> - phamcaoson1999@gmail.com
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-lg-2">
-                                <h5 className="title">Need help?</h5>
-                                <ul>
-                                    <li>
-                                        <a>FAQ</a>
-                                    </li>
-                                    <li>
-                                        <a>Contact Us</a>
-                                    </li>
-                                    <li>
-                                        <a>Return Policy</a>
-                                    </li>
-                                    <li>
-                                        <a>Product Registration</a>
-                                    </li>
-                                </ul>
 
-                            </div>
                             <div className="col-lg-4">
-                                <h5 className="title">Instagram Photos</h5>
+                                <h5 className="title">Owner/Co-owner</h5>
                                 <ul className="instagram-photos">
                                     <li>
                                         <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(9).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
+                                            <img className="img-fluid"
+                                                 src="https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/c234e48241988f87db7f7eb7d207d507.png"
+                                                 alt=""/>
+                                            <a href="https://www.nashtech.com/home/" target="_blank">
                                             </a>
                                         </div>
                                     </li>
                                     <li>
                                         <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(19).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(16).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(5).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(18).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(15).jpg" alt=""/>
-                                            <a>
-                                                <div className="mask waves-light waves-effect waves-light"></div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className="view overlay hm-white-slight z-depth-1">
-                                            <img className="img-fluid" src="http://mdbootstrap.com/img/Photos/Avatars/img%20(17).jpg" alt=""/>
+                                            <img className="img-fluid"
+                                                 src="https://scontent-xsp1-3.xx.fbcdn.net/v/t1.6435-9/130731175_100727945252953_6420774656984050162_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=8pONeDkddBcAX_9OHu2&_nc_ht=scontent-xsp1-3.xx&oh=9b816955746a94e8b81d38a391323647&oe=60FD3680"
+                                                 alt=""/>
                                             <a>
                                                 <div className="mask waves-light waves-effect waves-light"></div>
                                             </a>
@@ -163,8 +71,7 @@ class Footer extends Component {
                     </div>
                     <div className="footer-copyright">
                         <div className="container-fluid">
-                            © 2016 Copyright:
-                            <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
+
                         </div>
                     </div>
                 </footer>

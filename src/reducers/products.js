@@ -1,35 +1,43 @@
-var initialState = [
-    {
-        id: 1,
-        name: 'Iphone 7 plus',
-        image: 'https://www.xtmobile.vn/vnt_upload/product/Hinh_DT/Iphone/7-plus/thumbs/(600x600)_crop_7_plus_800x800.jpg',
-        description: 'Sản phẩm của Apple',
-        price: 500,
-        inventory: 10,
-        rating: 3
-    },
-    {
-        id: 2,
-        name: 'Samsung Galaxy S',
-        image: 'https://vnreview.vn/image/10/57/105745.jpg',
-        description: 'Sản phẩm của Samsung',
-        price: 600,
-        inventory: 20,
-        rating: 5
-    },
-    {
-        id: 3,
-        name: 'Sony XPeria',
-        image: 'https://www.sony.com.vn/image/93375262915162c04b81617da973a2c4?fmt=pjpeg&wid=330&bgcolor=FFFFFF&bgc=FFFFFF',
-        description: 'Sản phẩm của Sony',
-        price: 700,
-        inventory: 30,
-        rating: 4
+import {get} from "./../utils/Products/httpHelpers";
+import * as Types from "./../constants/ActionType";
+    var initialState = [];
+
+    var findIndex = (products, id) => {
+        var result = -1;
+        products.forEach( (product, index) => {
+            if (product.id === id){
+                result = index;
+            }
+        } )
+        return result;
     }
-];
+
 
 const products = (state = initialState, action) => {
+        //products ~ state
+    var index = -1;
+    var {id, product} = action;
     switch (action.type){
+        case Types.FETCH_PRODUCTS:
+            state = action.products; //save products from DB to state
+            return [...state];
+        case Types.ADD_PRODUCT:
+            state.push(action.product);
+            return [...state];
+        case Types.DELETE_PRODUCT:
+            index = this.findIndex(state, id);
+            if (index !== -1){
+                state.splice(index, 1);
+                return [...state];
+            }
+            break;
+        case Types.UPDATE_PRODUCT:
+             index = this.findIndex(state, product.id);
+             if (index !== -1){
+                state[index] = product;
+                return [...state];
+             }
+             break;
         default: return [...state];
     }
 }
